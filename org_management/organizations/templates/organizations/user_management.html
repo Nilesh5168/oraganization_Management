@@ -1,0 +1,6 @@
+<h2>Users in {{ organization.name }}</h2>
+<ul>
+    {% for user in users %}
+        <li>{{ user.username }} - <a href="{% url 'organizations:assign_role' user.id %}">Assign Role</a></li>
+    {% endfor %}
+</ul>
